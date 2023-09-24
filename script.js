@@ -5,6 +5,7 @@ const downloadBtn=document.getElementById('downloadBtn');
 const qrContainer=document.querySelector('.qr-body');
 
 let size=sizes.value;
+let qrCode=null;
 generateBtn.addEventListener('click', (e)=>{
     e.preventDefault();
     isEmptyInput();
@@ -37,6 +38,8 @@ function isEmptyInput(){
         generateQRCode();
     }
    else{
+    qrContainer.innerHTML="";
+    qrCode=null;
     alert("Enter the text or URL to generate your QR code");
    }
 }

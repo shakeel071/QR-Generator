@@ -1,9 +1,9 @@
 :root{
     --bg-color:#001122;
-    --primary-color:#155e75;
+    --primary-color:#4169E1;
     --border-radius:8px;
     --second-color:#fff;
-    --border-color:#7fb7c9;
+    --border-color:black;
 }
 *{
     margin: 0;
@@ -92,7 +92,7 @@ body{
         font-size: 16px;
         margin-inline: 4px;
     }
-    qr-body img{
+    .qr-body img{
         max-width: 100%;
         max-height: 100%;
         margin-block: 10px;
