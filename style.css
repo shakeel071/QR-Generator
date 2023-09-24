@@ -1,6 +1,6 @@
 :root{
-    --bg-color:#001122;
-    --primary-color:#4169E1;
+    --bg-color:#091921;
+    --primary-color:rgba(255,255,255,0.05);
     --border-radius:8px;
     --second-color:#fff;
     --border-color:black;
@@ -23,18 +23,22 @@ body{
     background-color: var(--primary-color);
     padding: 30px;
     width: 400px;
+    backdrop-filter: blur(10px);
     border-radius: var(--border-radius);
+    box-shadow: 5px 5px 30px rgba(0,0,0,0.2);
 }
 .qr-header h1{
      font-size: 26px;
      text-align: center;
-     color: var(--second-color);
+     color:var(--second-color);
      margin-bottom: 24px;
      text-transform: uppercase;
 }
 .qr-header input{
     width: 100%;
     margin-block: 12px;
+    background-color: var(--bg-color);
+    color: var(--second-color);
 }
 .qr-header input, select{
     padding: 8px;
@@ -44,8 +48,12 @@ body{
     border: 2px solid var(--border-color);
 }
 .qr-header label{
-    color: var(--second-color);
+    color:var(--second-color);
     font-size: 20px;
+}
+.qr-header select{
+    background-color: var(--bg-color);
+    color: var(--second-color);
 }
 .qr-header div{
     display: flex;
@@ -56,12 +64,12 @@ body{
     justify-content: center;
 }
 .qr-footer a{
-    background-color: var(--second-color);
+    background-color: var(--bg-color);
     text-decoration: none;
     font-size: 20px;
     padding: 14px 36px;
     margin-inline: 2px;
-    color: var(--primary-color);
+    color: var(--second-color);
     font-weight: 600;
     border-radius: var(--border-radius);
 }
@@ -75,7 +83,7 @@ body{
     max-height: 100%;
     margin-block: 10px;
     padding: 20px;
-    border: 0.5px solid var(--border-color);
+    border: 0.5px solid var(--second-color);
     border-radius: var(--border-radius);
 }
 
@@ -92,12 +100,5 @@ body{
         font-size: 16px;
         margin-inline: 4px;
     }
-    .qr-body img{
-        max-width: 100%;
-        max-height: 100%;
-        margin-block: 10px;
-        padding: 20px;
-        border: 2px solid var(--border-color);
-        border-radius: var(--border-radius);
-    }
+    
 }
