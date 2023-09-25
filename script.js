@@ -33,6 +33,7 @@ downloadBtn.addEventListener('click',()=>{
 qrText.addEventListener('input',()=>{
     if(qrText.value.length===0){
         qrContainer.innerHTML="";
+        qrContainer.style.display="none";
         qrCode=null;
     }
 });
@@ -48,11 +49,28 @@ function isEmptyInput(){
 
 function generateQRCode(){
     qrContainer.innerHTML="";
-    new QRCode(qrContainer, {
+    qrContainer.style.display="flex";
+   qrCode= new QRCode(qrContainer, {
         text:qrText.value,
         height:size,
         width:size,
         colorLight:"#FFFFFF",
-        colorDark:"#191970",
+        colorDark:"#000",
     });
+    let maxWidth = "100%"; // Default max-width for size 200x200
+            let marginLeft = "0"; // Default margin-left for size 200x200
+    
+            if (size === "100") {
+                maxWidth = "50%";
+                marginLeft = "25%";
+            } else if (size === "150") {
+                maxWidth = "75%";
+                marginLeft = "15.5%";
+            }
+                else if (size === "200") {
+                    maxWidth = "100%";
+                    marginLeft = "0";
+            }
+            qrContainer.style.maxWidth = maxWidth;
+            qrContainer.style.marginLeft = marginLeft; 
 }

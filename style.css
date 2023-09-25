@@ -113,6 +113,7 @@ body{
     border-left: 1px solid rgba(255,255,255,0.2);
     border-top: 1px solid rgba(255,255,255,0.2);
     border-radius: var(--border-radius);
+    box-shadow: 5px 5px 30px rgba(0,0,0,0.2);
 } 
 
 /* css for small screen  */
@@ -123,10 +124,29 @@ body{
         width: 80%;
         border-radius: var(--border-radius);
     }
+    .qr-footer{
+        margin-top: 7px;
+    }
     .qr-footer a{
         padding: 12px;
         font-size: 16px;
         margin-inline: 4px;
     }
-    
+    .qr-body{
+        display: none;
+        justify-content: center;
+        align-items: center;
+        max-width: 100%;
+        margin-left: 30px;
+        margin-block: 20px;
+        padding: 20px;
+        border-left: 0.5px solid rgba(255,255,255,0.2);
+        border-top: 0.5px solid rgba(255,255,255,0.2);
+        border-radius: var(--border-radius);
+        box-shadow: 5px 5px 30px rgba(0,0,0,0.2);
+    }
+    .qr-body img{
+        display: none;
+        border: none;   
+    } 
 }
