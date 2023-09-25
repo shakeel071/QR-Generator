@@ -25,7 +25,10 @@ body{
     width: 400px;
     backdrop-filter: blur(15px);
     border-radius: var(--border-radius);
+    border-left: 1px solid rgba(255,255,255,0.2);
+    border-top: 1px solid rgba(255,255,255,0.2);
     box-shadow: 5px 5px 30px rgba(0,0,0,0.2);
+    
 }
 .qr-header h1{
     
@@ -39,13 +42,16 @@ body{
 
 .qr-header h1:hover {
     color: blue;
-    text-shadow: 5px 5px 5px blue;
+    text-shadow: 5px 5px 5px black;
 }
 .qr-header input{
     width: 100%;
     margin-block: 12px;
     background-color: var(--primary-color);
-    color: var(--second-color);
+    color: #555;
+}
+.qr-header input::placeholder{
+    color: #555;
 }
 .qr-header input, select{
     padding: 8px;
@@ -55,13 +61,19 @@ body{
     border: 2px solid var(--primary-color);
 }
 .qr-header label{
-    color:var(--second-color);
+    color:#555;
     font-size: 20px;
 }
+.qr-header label:hover{
+    color:blue;
+    text-shadow: 5px 5px 5px black;
+}
+    
 .qr-header select{
     background-color: var(--primary-color);
-    color: var(--second-color);
+    color: #555;
 }
+
 .qr-header div{
     display: flex;
     justify-content: space-between;
@@ -76,7 +88,7 @@ body{
     font-size: 20px;
     padding: 14px 36px;
     margin-inline: 2px;
-    color: var(--second-color);
+    color: #555;
     font-weight: 600;
     border-radius: var(--border-radius);
 }
