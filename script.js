@@ -8,11 +8,8 @@ let size=sizes.value;
 let qrCode=null;
 generateBtn.addEventListener('click', (e)=>{
     e.preventDefault();
-    isEmptyInput();
-    
-    
+    isEmptyInput(); 
 });
-
 sizes.addEventListener('change',(e)=>{
     size=e.target.value;
     isEmptyInput();
@@ -33,13 +30,18 @@ downloadBtn.addEventListener('click',()=>{
     }
 })
 
+qrText.addEventListener('input',()=>{
+    if(qrText.value.length===0){
+        qrContainer.innerHTML="";
+        qrCode=null;
+    }
+});
+
 function isEmptyInput(){
     if(qrText.value.length>0){
         generateQRCode();
     }
    else{
-    qrContainer.innerHTML="";
-    qrCode=null;
     alert("Enter the text or URL to generate your QR code");
    }
 }

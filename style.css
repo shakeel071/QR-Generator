@@ -3,13 +3,13 @@
     --primary-color:rgba(255,255,255,0.05);
     --border-radius:8px;
     --second-color:#fff;
-    --border-color:black;
+    --border-color:white;
 }
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
+    font-family: cursive;
 }
 body{
     width: 100%;
@@ -23,21 +23,28 @@ body{
     background-color: var(--primary-color);
     padding: 30px;
     width: 400px;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(15px);
     border-radius: var(--border-radius);
     box-shadow: 5px 5px 30px rgba(0,0,0,0.2);
 }
 .qr-header h1{
+    letter-spacing: 2px;
      font-size: 26px;
      text-align: center;
-     color:var(--second-color);
      margin-bottom: 24px;
      text-transform: uppercase;
+     color: #555;
+     transition: 0.25s;
+}
+
+.qr-header h1:hover {
+    color: blue;
+    text-shadow: 5px 5px 5px blue;
 }
 .qr-header input{
     width: 100%;
     margin-block: 12px;
-    background-color: var(--bg-color);
+    background-color: var(--primary-color);
     color: var(--second-color);
 }
 .qr-header input, select{
@@ -45,14 +52,14 @@ body{
     border-radius: var(--border-radius);
     font-size: 18px;
     outline: none;
-    border: 2px solid var(--border-color);
+    border: 2px solid var(--primary-color);
 }
 .qr-header label{
     color:var(--second-color);
     font-size: 20px;
 }
 .qr-header select{
-    background-color: var(--bg-color);
+    background-color: var(--primary-color);
     color: var(--second-color);
 }
 .qr-header div{
@@ -64,7 +71,7 @@ body{
     justify-content: center;
 }
 .qr-footer a{
-    background-color: var(--bg-color);
+    background-color: var(--primary-color);
     text-decoration: none;
     font-size: 20px;
     padding: 14px 36px;
@@ -73,19 +80,24 @@ body{
     font-weight: 600;
     border-radius: var(--border-radius);
 }
+.qr-footer a:hover{
+    color: black;
+    background-color: blue;
+
+}
 .qr-body{
     display: grid;
     place-items: center;
     padding: 20px;
 }
-.qr-body img{
+ .qr-body img{
     max-width: 100%;
     max-height: 100%;
     margin-block: 10px;
     padding: 20px;
-    border: 0.5px solid var(--second-color);
+    border: 0.5px solid var(--primary-color);
     border-radius: var(--border-radius);
-}
+} 
 
 /* css for small screen  */
 @media only screen and (max-width:600px){
