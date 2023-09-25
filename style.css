@@ -91,6 +91,9 @@ body{
     color: #555;
     font-weight: 600;
     border-radius: var(--border-radius);
+    border-top: 0.5px solid rgba(255,255,255,0.2);
+    border-left: 0.5px solid rgba(255,255,255,0.2);
+    
 }
 .qr-footer a:hover{
     color: black;
