@@ -74,3 +74,17 @@ function generateQRCode(){
             qrContainer.style.maxWidth = maxWidth;
             qrContainer.style.marginLeft = marginLeft; 
 }
+function createBubble(){
+    const section=document.querySelector('body')
+    const createElement=document.createElement('span')
+    var sze=Math.random() * 40;
+    createElement.style.width=20 + sze+'px';
+    createElement.style.height=20 + sze+'px'
+    createElement.style.left=Math.random() * innerWidth + "px";
+    section.appendChild(createElement);
+
+    setTimeout(() =>{
+        createElement.remove()
+    },4000)
+}
+setInterval(createBubble,50)
