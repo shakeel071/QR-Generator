@@ -80,11 +80,11 @@ function createBubble(){
     var sze=Math.random() * 40;
     createElement.style.width=20 + sze+'px';
     createElement.style.height=20 + sze+'px'
-    createElement.style.left=Math.random() * innerWidth + "px";
+    createElement.style.left=Math.random() *(window.innerWidth-40) + "px";
     section.appendChild(createElement);
 
     setTimeout(() =>{
-        createElement.remove()
+        createElement.remove();
     },4000)
 }
-setInterval(createBubble,50)
+setInterval(createBubble,50);
